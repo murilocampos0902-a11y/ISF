@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Reclamações</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="nav1">
+        <a href="inicio.html">Início</a>
+        <a href="login.html">Login</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="reclamacoes.html">Reclamações</a>
+        <a href="enviar reclamaçoes.html">Enviar Reclamações</a>
+        <a href="sobre nos.html">Sobre nós</a>
+        <a href="admin.html">Area restrita</a>
+    </nav>
+
+    <div class="container">
+
+        <header>
+            <img src="ITAJUBÁ SEM FILTRO .jpg" alt="Logo do Site" width="500PX" height="100PX">
+        </header>
+
+        <section>
+            <br><br><br>
+
+            <h1 id="titulo-reclamaçao">Envie suas reclamações aqui:</h1>
+
+            <form id="form-reclamacao">
+                <br>
+
+                <fieldset>
+                    
+                    <label for="nome-rec">Digite seu nome:</label>
+                    <input id="nome-rec" type="text" maxlength="50" size="50" required>
+
+                    <label for="input_rec">Digite sua reclamação</label>
+                    <textarea id="input_rec" name="input_rec" maxlength="500" rows="4" cols="50" required></textarea>
+
+                    <button style="border-radius: 20px;" type="submit">Enviar</button>
+
+                    <br><br>
+
+                </fieldset>
+            </form>
+            <div id="mensagemEnvio" class="mensagem-envio"></div>
+
+            <br><br><br><br><br>
+
+            <footer>&copy; Todos os direitos reservados</footer>
+
+        </section>
+
+    </div>
+    <script src="script.js"></script></body>
+
+</html>

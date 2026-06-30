@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reclamações</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+ 
+<body>
+ 
+   <nav class="nav1">
+        <a href="inicio.html">Início</a>
+        <a href="login.html">Login</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="reclamacoes.html">Reclamações</a>
+        <a href="enviar reclamaçoes.html">Enviar Reclamações</a>
+        <a href="sobre nos.html">Sobre nós</a>
+        <a href="admin.html">Area restrita</a>
+    </nav>
+ 
+ 
+    <div class="container">
+ <input type="text" id="pesquisa" placeholder="Pesquisar reclamação">
+<button onclick="pesquisarReclamacao()">Pesquisar</button>
+        <header>
+            <h1>Reclamações</h1>
+        </header>
+ 
+        <div class="reclamacoes">
+ 
+            <div id="reclamacao1" class="reclamacao-item" data-id="1">
+                <h2>Iara Rafaella</h2>
+                <p>Falta de capina e mato alto em bairros.</p>
+                <button class="curtir">👍 Curtir</button>
+                <div class="likes">0</div>
+                <span>curtidas</span>
+            </div>
+ 
+            <div id="reclamacao2" class="reclamacao-item" data-id="2">
+                <h2>Mariana Florescer</h2>
+                <p>Longa espera em pontos de ônibus.</p>
+                <button class="curtir">👍 Curtir</button>
+                <div class="likes">0</div>
+                <span>curtidas</span>
+            </div>
+ 
+            <div id="reclamacao3" class="reclamacao-item" data-id="3">
+                <h2>Joana de Paula</h2>
+                <p>Buracos e obras causam congestionamento.</p>
+                <button class="curtir">👍 Curtir</button>
+                <div class="likes">0</div>
+                <span>curtidas</span>
+            </div>
+ 
+            <div id="reclamacao4" class="reclamacao-item" data-id="4">
+                <h2>Yara Aparecida</h2>
+                <p>Quedas constantes de luz.</p>
+                <button class="curtir">👍 Curtir</button>
+                <div class="likes">0</div>
+                <span>curtidas</span>
+            </div>
+ 
+            <div id="reclamacao5" class="reclamacao-item" data-id="5">
+                <h2>Miguel Braga</h2>
+                <p>Falta de segurança e apoio.</p>
+                <button class="curtir">👍 Curtir</button>
+                <div class="likes">0</div>
+                <span>curtidas</span>
+            </div>
+        </div>
+
+        <div class="mapaLocalizacao">
+            <h2>Mapa de Itajubá</h2>
+            <div id="mapa"></div>
+        </div>
+
+    </div>
+ 
+ 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+ 
+  <script>
+    const map = L.map("mapa").setView([-22.4237, -45.4531], 12);
+ 
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: "© OpenStreetMap"
+    }).addTo(map);
+ 
+ 
+    L.marker([-22.4237, -45.4531])
+      .addTo(map)
+      .bindPopup("Itajubá - MG");
+ 
+     
+  </script>
+ 
+ 
+ 
+    <script src="script.js"></script>
+ 
+</body>
+ 
+</html>

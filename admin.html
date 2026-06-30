@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área Administrador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="nav1">
+        <a href="inicio.html">Inicio</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="login.html">Login</a>
+        <a href="enviar reclamaçoes.html">Enviar reclamaçoes</a>
+        <a href="reclamacoes.html">Reclamaçoes</a>
+        <a href="sobre nos.html">Sobre-nos</a>
+        <a href="admin.html">Area Restrita</a>
+    </nav>
+
+    <div class="pagina">
+
+        <div class="container" id="LoginAdmin">
+
+            <header>
+                <h1>Acesso Restrito</h1>
+                <h2 style="color: #548687;">Digite sua senha de administrador</h2>
+            </header>
+
+            <fieldset>
+
+                <form onsubmit="autenticarAdministrador(event)">
+
+                    <label for="senha">Senha</label>
+
+                    <input 
+                        type="password" 
+                        id="senha"
+                        placeholder="Digite sua senha"
+                    >
+
+                    <button type="submit">
+                        Entrar
+                    </button>
+
+                </form>
+
+            </fieldset>
+
+        </div>
+        <div id="conteudoAdmin" style="display: none;">
+            <div class="container admin-conteudo">
+                <div id="estatisticas" class="estatisticas"></div>
+                <button style="background-color: #548687;"  class="botao-sair" onclick="logoutAdmin()">Sair</button>
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
