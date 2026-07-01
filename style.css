@@ -87,31 +87,40 @@ img{
 }
 
 #LoginAdmin fieldset {
-    background: linear-gradient(135deg, rgba(84, 134, 135, 0.05), rgba(94, 157, 160, 0.05));
-    border: 2px solid rgba(84, 134, 135, 0.2);
+    background: linear-gradient(135deg, rgba(91, 53, 165, 0.05), rgba(132, 0, 255, 0.05));
+    border: 2px solid rgba(91, 53, 165, 0.2);
 }
 
 #LoginAdmin h1 {
-    color: #548687;
+    color: #5b35a5;
     margin-bottom: 10px;
 }
 
 #LoginAdmin h2 {
     margin-top: 0;
     font-size: 18px;
+    color: #6c43a6;
+}
+
+#LoginAdmin h2::after {
+    background: #8400ff;
+}
+
+#LoginAdmin label {
+    color: #5b35a5;
 }
 
 #LoginAdmin input {
-    border: 2px solid rgba(84, 134, 135, 0.2);
+    border: 2px solid rgba(91, 53, 165, 0.2);
 }
 
 #LoginAdmin input:focus {
-    border-color: #548687;
-    box-shadow: 0 0 12px rgba(84, 134, 135, 0.3);
+    border-color: #8400ff;
+    box-shadow: 0 0 12px rgba(132, 0, 255, 0.3);
 }
 
 #LoginAdmin button[type="submit"] {
-    background: linear-gradient(135deg, #548687, #5f9da0);
+    background: linear-gradient(135deg, #5b35a5, #8400ff);
     width: 100%;
     padding: 14px;
     font-size: 16px;
@@ -119,7 +128,7 @@ img{
 }
 
 #LoginAdmin button[type="submit"]:hover {
-    background: linear-gradient(135deg, #4a7577, #558990);
+    background: linear-gradient(135deg, #4a2b87, #6c00d6);
     transform: translateY(-2px);
 }
 
@@ -162,7 +171,7 @@ img{
 }
 
 .reclamacao button {
-    background: linear-gradient(135deg, #5f9da0, #548687);
+    background: linear-gradient(135deg, #6c43a6, #8400ff);
     padding: 10px 16px;
     font-size: 14px;
     margin-top: 12px;
@@ -398,7 +407,7 @@ header img:hover{
 .hero-btn{
     padding: 16px 28px;
     border-radius: 20px;
-    background: linear-gradient(135deg,#5f9da0,#548687);
+    background: linear-gradient(135deg,#6c43a6,#8400ff);
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -615,7 +624,7 @@ p{
 }
 
 .curtir {
-    background: linear-gradient(135deg, #5f9da0, #548687);
+    background: linear-gradient(135deg, #6c43a6, #8400ff);
     color: white;
     padding: 12px 20px;
     border: none;
@@ -624,14 +633,14 @@ p{
     font-size: 14px;
     cursor: pointer;
     transition: 0.3s ease;
-    box-shadow: 0 6px 16px rgba(84, 134, 135, 0.2);
+    box-shadow: 0 6px 16px rgba(108, 67, 166, 0.3);
     display: inline-block;
 }
 
 .curtir:hover {
-    background: linear-gradient(135deg, #548687, #5f9da0);
+    background: linear-gradient(135deg, #5b35a5, #6c43a6);
     transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 8px 20px rgba(84, 134, 135, 0.3);
+    box-shadow: 0 8px 20px rgba(108, 67, 166, 0.35);
 }
 
 .curtir:active {
@@ -671,7 +680,7 @@ button,
     margin-top: 18px;
     border-radius: 20px;
     background:
-    linear-gradient(135deg,#5f9da0,#548687);
+    linear-gradient(135deg,#6c43a6,#8400ff);
     color: white;
     text-decoration: none;
     font-size: 15px;
@@ -679,7 +688,7 @@ button,
     text-align: center;
     transition: 0.28s ease;
     box-shadow:
-    0 8px 18px rgba(84,134,135,0.22);
+    0 8px 18px rgba(108,67,166,0.3);
     position: relative;
     overflow: hidden;
 }
@@ -688,10 +697,10 @@ button:hover,
 .btn:hover,
 .ver:hover{
     background:
-    linear-gradient(135deg,#548687,#5f9da0);
+    linear-gradient(135deg,#5b35a5,#6c43a6);
     transform: translateY(-3px);
     box-shadow:
-    0 12px 22px rgba(84,134,135,0.22);
+    0 12px 22px rgba(108,67,166,0.35);
 }
 
 .frase-final{
@@ -1018,6 +1027,15 @@ textarea{
     color: white;
 }
 
+.botoes-cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
  
  #mapa{
       width: 80%;
@@ -1090,5 +1108,3 @@ p{
     backdrop-filter: blur(4px);
    
 }
- 
- 
