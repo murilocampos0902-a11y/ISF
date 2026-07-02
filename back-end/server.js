@@ -7,14 +7,12 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-    host: process.env.DB_HOST || "mysql-2b2680e3-joaofiliperosa04-21d3.e.aivencloud.com",
-    user: process.env.DB_USER || "avnadmin",
+    host: process.env.DB_HOST || "localhost",
+    user: process.env.DB_USER || "root",
     password: process.env.DB_PASSWORD || "",
-    database: process.env.DB_NAME || "itajub_sem_filtro",
-    port: process.env.DB_PORT || 17396,
-    ssl: {
-        rejectUnauthorized: false
-    }
+    database: process.env.DB_NAME || "ItajubaSemFiltro",
+    port: process.env.DB_PORT || 3000,
+    ssl: process.env.DB_HOST ? { rejectUnauthorized: false } : null
 });
 
 db.connect((erro) => {
