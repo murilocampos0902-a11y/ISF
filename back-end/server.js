@@ -11,7 +11,7 @@ const db = mysql.createConnection({
     user: process.env.DB_USER || "root",
     password: process.env.DB_PASSWORD || "",
     database: process.env.DB_NAME || "ItajubaSemFiltro",
-    port: process.env.DB_PORT || 3000,
+    port: process.env.DB_PORT || 3306,
     ssl: process.env.DB_HOST ? { rejectUnauthorized: false } : null
 });
 
