@@ -12,7 +12,9 @@ const db = mysql.createConnection({
     password: process.env.DB_PASSWORD || "",
     database: process.env.DB_NAME || "itajub_sem_filtro",
     port: process.env.DB_PORT || 17396,
-    ssl: process.env.DB_HOST ? {rejectUnauthorized: false} : null
+    ssl: {
+        rejectUnauthorized: false
+    }
 });
 
 db.connect((erro) => {
