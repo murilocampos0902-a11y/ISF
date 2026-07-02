@@ -7,20 +7,23 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "ItajubaSemFiltro"
+    host: process.env.DB_HOST || "mysql-2b2680e3-joaofiliperosa04-21d3.e.aivencloud.com",
+    user: process.env.DB_USER || "avnadmin",
+    password: process.env.DB_PASSWORD || "",
+    database: process.env.DB_NAME || "itajub_sem_filtro",
+    port: process.env.DB_PORT || 17396,
+    ssl: {
+        rejectUnauthorized: false
+    }
 });
 
 db.connect((erro) => {
-    if(erro){
-        console.log("Erro ao conectar");
+    if(erro) {
+        console.log("Erro ao conectar"); 
         console.log(erro);
         return;
-    }
-    console.log("Conectado com sucesso");
-});
+    }});
+    
   
 let tentativas = 0;
 
@@ -258,8 +261,9 @@ app.post("/login", (req, res) => {
     );
  
 });
- 
 
-app.listen(3000, () => {
-    console.log("Servidor rodando em http://localhost:3000");
-});
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+        console.log("Servidor rodando em: ")
+        console.log(`porta ${PORT}`)
+    })
