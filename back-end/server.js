@@ -16,15 +16,19 @@ const db = mysql.createConnection({
 });
 
 db.connect((erro) => {
-    if(erro) {
-        console.log("Erro ao conectar"); 
-        console.log(erro);
+    if (erro) {
+        console.error("Erro ao conectar ao banco:");
+        console.error(erro);
         return;
-    }});
+    }
+
+    console.log("Conectado ao Aiven com sucesso!");
+});
+
     
   
 let tentativas = 0;
-
+ 
 app.get('/', (req, res) => {
     res.send('Web service rodando com sucesso!');
 });
