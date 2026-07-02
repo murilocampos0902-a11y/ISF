@@ -25,6 +25,10 @@ db.connect((erro) => {
   
 let tentativas = 0;
 
+app.get('/', (req, res) => {
+    res.send('Web service rodando com sucesso!');
+});
+
 app.post("/admin", (req, res) => {
     const { senha } = req.body;
 
